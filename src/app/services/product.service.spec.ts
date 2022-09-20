@@ -10,7 +10,7 @@ import { ProductsService } from './products.service';
 import { TokenService } from './token-service';
 
 
-fdescribe('ProductsService', () =>{
+describe('ProductsService', () =>{
 
     let productsService : ProductsService;
     let httpControler: HttpTestingController;
@@ -51,6 +51,7 @@ fdescribe('ProductsService', () =>{
                 //Assert
                  expect(data.length).toEqual(mockData.length);
                  expect(data).toEqual(mockData);
+                 expect(data).toBeUndefined();
              });
 
              //http config

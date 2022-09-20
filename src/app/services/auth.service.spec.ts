@@ -6,7 +6,7 @@ import { AuthService } from './auth.service';
 import { TokenService } from './token-service';
 
 
-fdescribe('AuthService', () => {
+describe('AuthService', () => {
     let authService: AuthService;
     let httpControler: HttpTestingController;
     let tokenService: TokenService;

@@ -31,7 +31,15 @@ module.exports = function (config) {
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
-      ]
+      ],
+      check: {
+        global: {
+          statements: 30,
+          branches: 30,
+          funtions: 30,
+          lines: 30
+        }
+      }
     },
     reporters: ['mocha'],
     port: 9876,
@@ -39,7 +47,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['ChromeHeadLess'],
-    customLauchers: {
+    customLaunchers: {
       ChromeHeadLessCI: {
         base: 'ChromeHeadLess',
         flags: ['--no-sandbox']
